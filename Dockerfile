@@ -20,9 +20,9 @@ php-zip \
 unzip
 
 # copy files
-ADD https://wordpress.org/latest.zip /var/www
-RUN unzip /var/www/latest.zip && \  
-    chown -R www-data:root /var/www/wordpress
+ADD https://wordpress.org/latest.tar.gz /var/www
+RUN tar -xzvf /var/www/latest.zip && \  
+    chown -R www-data:root /var/www/
 
 # apache
 COPY apache.conf /etc/apache2/sites-available/wordpress.conf
