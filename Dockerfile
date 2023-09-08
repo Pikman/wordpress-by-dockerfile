@@ -16,7 +16,8 @@ php-json \
 php-mbstring \
 php-mysql \
 php-xml \
-php-zip
+php-zip \
+unzip
 
 # copy files
 ADD https://wordpress.org/latest.zip /var/www
