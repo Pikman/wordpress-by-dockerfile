@@ -21,7 +21,7 @@ unzip
 
 # copy files
 ADD https://wordpress.org/latest.zip /var/www
-RUN unzip /var/www/latest.zip /var/www && \  
+RUN unzip /var/www/latest.zip && \  
     chown -R www-data:root /var/www/wordpress
 
 # apache
