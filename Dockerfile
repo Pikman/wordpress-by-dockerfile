@@ -19,8 +19,9 @@ php-xml \
 php-zip
 
 # copy files
-ADD wordpress-6.1.1.tar.gz /var/www
-RUN chown -R www-data:root /var/www/wordpress
+ADD https://wordpress.org/latest.zip /var/www
+RUN tar -xf /var/www/latest.zip . && \  
+    chown -R www-data:root /var/www/wordpress
 
 # apache
 COPY apache.conf /etc/apache2/sites-available/wordpress.conf
