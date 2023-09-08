@@ -20,7 +20,7 @@ php-zip
 
 # copy files
 ADD https://wordpress.org/latest.zip /var/www
-RUN tar -xf /var/www/latest.zip . && \  
+RUN unzip /var/www/latest.zip /var/www && \  
     chown -R www-data:root /var/www/wordpress
 
 # apache
