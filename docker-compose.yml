@@ -3,10 +3,10 @@ services:
   db:
     image: mysql:5.7
     environment:
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: 'wpuser'
-      MYSQL_PASSWORD: 'password'
-      MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_DATABASE: ${{ env.MYSQL_DATABASE }}
+      MYSQL_USER: ${{ secrets.MYSQL_USER }}
+      MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
+      MYSQL_ROOT_PASSWORD: ${{ secrets.MYSQL_ROOT_PASSWORD }}
     ports:
       - '3306:3306'
   
